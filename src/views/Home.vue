@@ -123,7 +123,15 @@ export default {
 </script>
 
 <style>
+body,
+h1,
+h2,
+h3,
+p {
+  font-family: "Poppins";
+}
 .v-btn {
   text-transform: none !important;
+  font-family: "Poppins";
 }
 </style>

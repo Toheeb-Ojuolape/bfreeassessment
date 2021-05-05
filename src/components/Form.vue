@@ -14,8 +14,9 @@
     <v-btn
       color="#1877f2"
       @click="addUrl(link)"
-      class="white--text mt-1 mb-4 pa-6"
-      style="border-radius: 30px"
+      elevation="24"
+      class="white--text mt-1 mb-4"
+      style="border-radius: 30px; padding: 25px"
       :disabled="!valid"
     >
       Generate QR Code
