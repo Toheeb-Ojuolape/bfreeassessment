@@ -1,4 +1,4 @@
-describe("HelloWorld.vue", () => {
+describe("Home.vue", () => {
   test("setup correctly", () => {
     expect(true).toBe(true);
   });

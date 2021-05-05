@@ -28,6 +28,7 @@ export default {
   name: "QrPage",
 
   computed: {
+    //Retrieving data persisted in local storage for display as QR codes
     urls() {
       let theLinks = JSON.parse(localStorage.getItem("urls"));
       return theLinks;

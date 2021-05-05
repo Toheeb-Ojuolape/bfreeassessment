@@ -3,7 +3,7 @@
     <v-main
       style="
         background: #fbe4c4;
-        padding: 150px 00px 0px 0px;
+        padding: 150px 00px 30px 0px;
         text-align: center;
       "
     >
@@ -15,6 +15,15 @@
         Please enter a website link below to generate a QR Code 😀
       </p>
       <Form @addUrl="addUrl" />
+
+      <router-link
+        v-if="storeData != null"
+        to="/qrpage"
+        color="#f66c1f"
+        class="orange--text mt-2 animate__animated animate__fadeInUp animate__delay-2s"
+      >
+        View generated QR codes</router-link
+      >
       <v-dialog v-model="dialog" max-width="500">
         <v-card elevation="24" color="red" class="pa-7 text-center">
           <v-icon size="100px" color="white">mdi-close-circle</v-icon>
@@ -63,7 +72,7 @@ export default {
   data() {
     return {
       link: "",
-
+      showQRbutton: false,
       dialog: false,
       empty: false,
       storeData: "",
@@ -74,11 +83,12 @@ export default {
     this.clearLocal();
   },
 
-  beforeDestroy() {
-    localStorage.clear();
-  },
+  // beforeDestroy() {
+  //   localStorage.clear();
+  // },
 
   methods: {
+    //firing function emitted by child component to dispatch link to Vuex
     addUrl(link) {
       this.link = link;
       this.storeData = JSON.parse(localStorage.getItem("urls"));
@@ -96,6 +106,7 @@ export default {
       }
     },
 
+    // Clearing local storage when limit of 10 items is reached
     clearLocal() {
       this.storeData = JSON.parse(localStorage.getItem("urls"));
       if (this.storeData != null && this.storeData.length >= 10) {
