@@ -15,7 +15,8 @@
       color="#1877f2"
       @click="addUrl(link)"
       elevation="24"
-      style="border-radius: 30px; padding: 25px"
+      rounded
+      style="padding: 25px"
       class="white--text mb-4"
       :disabled="!valid"
     >
