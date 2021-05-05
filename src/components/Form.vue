@@ -7,7 +7,7 @@
         prepend-inner-icon="mdi-map-marker"
         label="Enter URL here"
         solo
-        style="width: 80%; margin: 0px auto -10px auto"
+        style="width: 80%; margin: 0px auto 0px auto"
         prefix="https://"
       />
     </v-form>
@@ -15,8 +15,7 @@
       color="#1877f2"
       @click="addUrl(link)"
       elevation="24"
-      class="white--text mt-1 mb-4"
-      style="border-radius: 30px; padding: 25px"
+      class="white--text mb-4"
       :disabled="!valid"
     >
       Generate QR Code
