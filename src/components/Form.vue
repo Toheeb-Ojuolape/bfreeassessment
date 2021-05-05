@@ -16,7 +16,7 @@
       @click="addUrl(link)"
       elevation="24"
       rounded
-      style="padding: 25px"
+      x-large
       class="white--text mb-4"
       :disabled="!valid"
     >
