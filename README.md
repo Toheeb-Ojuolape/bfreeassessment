@@ -9,6 +9,11 @@ I hope you find me worthy. Looking forward to your response.
 
 P.S I'm a huge fan of emojis and animations so I used a couple of those in my design, if you don't mind
 
+## Site deployed
+```
+https://vigilant-joliot-d2b123.netlify.app/
+```
+
 ## Project setup
 ```
 yarn install
